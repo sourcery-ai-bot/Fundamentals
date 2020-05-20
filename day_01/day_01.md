@@ -20,6 +20,8 @@ exit()
 
 `pwd` - print working directory
 
+`cd` - change directory
+
 ## Exercise 01
 
 Write a program that prompts a user for their name, and then greets them.
@@ -68,7 +70,7 @@ friend = "charles"
 ```python
 "HELLo".swapcase()
 ```
-2b. Replace a substring with another string.
+2b. Replace a substring with another string.https://github.com/compsciacademy/Fundamentals
 
 ```
 "Are you hungry?" --> "Are you thirsty?"
@@ -93,3 +95,69 @@ friend = "charles"
 ```python
 "                How are you?             ".lstrip()
 ```
+
+## Math Operations
+
+```python
+5 * 5 # five times five
+2 + 2 + 1
+10 / 2 # what do you expect this to return?
+10 // 2 # what do you expect this to return?
+isinstance(10 / 2, int)
+isinstance(10 / 2, float)
+2 ** 10
+10 % 3
+```
+
+## Exercise 03
+
+1. Write code that asks a user for two inputs that are numbers, and returns the product of those numbers.
+
+```python
+first_number = input("Give me a number: ")
+
+second_number = input("Give me another number: ")
+
+print(int(first_number) * int(second_number))
+```
+
+# Comparison Operators
+
+```
+True
+False
+10 > 
+5 < 2
+True and True
+True and (10 > 5)
+True or False
+10 >= 10 or False
+5 == (2 + 3)
+my_password = "secret"
+my_saved_password = "super_secret"
+my_password == my_saved_password
+
+```
+
+# Conditionals
+
+Let's try using `if .. elif .. else`
+
+```python
+a = 5
+if a > 15:
+    print("Big number!")
+elif a > 10:
+    print("Medium number!")
+else:
+    print("Small number!")
+
+```
+
+## Exercise 04
+
+Write code that asks users for the year of their car and then prints: future, new, old or very old, depending on the year.
+
+
+
+
