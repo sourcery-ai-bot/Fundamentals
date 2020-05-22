@@ -144,4 +144,36 @@ Let's rewrite our FizzBuzz program as a function that takes 2 optional parameter
 
 The idea is that you can change the words by calling the fuction. For example, if I call: `fizzbuzz('Hello', 'Friend')`, then instead of printing `Fizz`, the program will print `Hello`. Instead of printing `Buzz`, the program will print `Friend`, instead of printing `FizzBuzz`, the program will print `HelloFriend`.
 
+```python
+def FizzBuzz(first="Fizz", second="Buzz"):
+    for num in range(1, 101):
+        if num % 3 == 0 and num % 5 == 0:
+            print("{}{}".format(first,second))
+        elif num % 3 == 0:
+            print("{}".format(first))
+        elif num % 5 == 0:
+            print("{}".format(second))
+        else:
+            print(num)
 
+FizzBuzz()
+FizzBuzz("Cat","Dog")
+```
+
+## Dictionaries
+
+In python there is a data type that maps `key:value` pairs, that we call a dictionary.
+
+```python
+books = {"Author": ["list", "of", "titles"]}
+
+books = {
+    "Pinker": ["The Language Instinct", "How the Mind Works", "Words and Rules"], 
+    "Dawkins": ["The Selfish Gene", "The Extended Phenotype", "The Blind Watchmaker"]
+}
+```
+
+## Homework Assignment for Module 02
+
+Write a program that asks a user what the user wants to do. The choices are:
+view authors, view books by author, add authors, add books to authors.
