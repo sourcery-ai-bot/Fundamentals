@@ -123,3 +123,25 @@ print(greeting)
 ```
 
 And now, rewrite it using functions!
+
+## Exercise 04
+
+Let's review FizzBuzz, but this time as a function!
+
+```python
+for fizzbuzz in range(101):
+    if fizzbuzz % 3 == 0 and fizzbuzz % 5 == 0:
+        print("FizzBuzz")
+    elif fizzbuzz % 3 == 0:
+        print("Fizz")
+    elif fizzbuzz % 5 == 0:
+        print("Buzz")
+    else:
+        print(fizzbuzz)
+```
+
+Let's rewrite our FizzBuzz program as a function that takes 2 optional parameters, `first` and `second` whose defaults are `Fizz` and `Buzz`.
+
+The idea is that you can change the words by calling the fuction. For example, if I call: `fizzbuzz('Hello', 'Friend')`, then instead of printing `Fizz`, the program will print `Hello`. Instead of printing `Buzz`, the program will print `Friend`, instead of printing `FizzBuzz`, the program will print `HelloFriend`.
+
+
