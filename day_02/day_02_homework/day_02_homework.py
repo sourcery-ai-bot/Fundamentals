@@ -15,18 +15,21 @@ add books to authors  add books to authors by name of author and title of book
 q, quit               quits the program
 """
 
-choice = input("What do you want to do? (Type 'help' for the help menu): ")
+while True:
+    choice = input("What do you want to do? (Type 'help' for the help menu): ")
 
-if choice == "help" or choice == 'h':
-    print(help_menu)
-elif choice == "view authors":
-    print("You chose {}.".format(choice))
-elif choice == "view books by author":
-    print("You chose {}.".format(choice))
-elif choice == "add authors":
-    print("You chose {}.".format(choice))
-elif choice == "add books to authors":
-    print("You chose {}.".format(choice))
-else:
-    print("Invalid selection.")
-    print(help_menu)
+    if choice == "help" or choice == 'h':
+        print(help_menu)
+    elif choice == "q" or choice == "quit":
+        break
+    elif choice == "view authors":
+        print("You chose {}.".format(choice))
+    elif choice == "view books by author":
+        print("You chose {}.".format(choice))
+    elif choice == "add authors":
+        print("You chose {}.".format(choice))
+    elif choice == "add books to authors":
+        print("You chose {}.".format(choice))
+    else:
+        print("ERROR: Invalid selection!")
+        print(help_menu)
