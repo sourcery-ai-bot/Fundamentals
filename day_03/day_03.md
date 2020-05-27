@@ -220,3 +220,13 @@ back_pack1.remove()
 back_pack1.look_inside()
 
 ```
+
+## Exercise 03  
+
+Now, using what we have learned, let's set up a game that makes use of 3 types of objects:
+
+A cat, birds, and a bag. The cat hunts the birds, catches them, and stores them in a bag. When the cat is hungry, it removes a bird from its bag, if there is one, and eats it.
+
+Part 1:
+
+Create 4 files: 1 for each class, and 1 to run the game logic. For now, just instantiate 1 instance of each class in the game file.
