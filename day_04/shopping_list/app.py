@@ -36,16 +36,31 @@ def remove_item_by_index(item_index):
 #   - Add item to list
 #   - Remove item from list
 
-options = ["View list", "Add item to list", "Remove item from list"]
+options = ["View list: v", "Add item to list: a", "Remove item from list: r", "Quit: q"]
 
-def get_user_input():
+def welcome_user():
     print("Welcome to the list program!\n")
+
+def show_options():
     print("The options are: ")
     for option in options:
         print(" - " + option)
-    return input("\nEnter q to quit: ")
+
+def get_user_input():
+    return input("\nEnter an option: ").lower()
+    
+welcome_user()
 
 while True:
+    show_options()
     user_input = get_user_input()
     if user_input == "q":
         break
+    elif user_input == "view list" or user_input == "v":
+        view_list()
+    elif user_input == "a":
+        item = input("Enter the name of an item: ")
+        add_item(item)
+    elif user_input == "r":
+        item_index = int(input("Enter the number of the item to remove: "))
+        remove_item_by_index(item_index)
