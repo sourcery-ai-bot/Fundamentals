@@ -26,10 +26,10 @@ class User:
     user_count = 0
     last_user_id = 0
 
-    def __init__(self, first_name, last_name, email):
+    def __init__(self, first_name, last_name):
         self.first_name = first_name
         self.last_name = last_name
-        self.email = email
+        self.email = last_name + "@example.com"
         User.user_count += 1
         User.last_user_id += 1
         self.id = User.last_user_id
