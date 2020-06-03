@@ -53,3 +53,42 @@ while True:
 
 ```
 
+## Reading from and Writing to Files  
+  
+We worked on a program that allowed us to view, add, and remove users. Let's add edit (or update) to the list of options, and let's store users in a file. That way, we can save the list of users when we exit the program. Think about what the file should look like.
+
+## Exercise 01
+
+Create two files in a directory, `app.py` and `lol`
+
+lol
+```
+this is line 1
+here is another line
+the third line is here
+
+```
+
+app.py
+```python
+my_file = open('lol')
+
+for line in my_file:
+    print(line)
+
+my_file = open('lol', 'w')
+my_file.write("Here is a new line!")
+```
+
+If you run the app, you'll notice it overwrites the file. Using what you know now, write some codes such that you can add a new line to a file without losing the file data.
+
+e.g. the result should be:
+
+lol
+```
+this is line 1
+here is another line
+the third line is here
+Here is a new line!
+
+```
