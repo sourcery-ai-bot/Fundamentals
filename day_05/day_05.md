@@ -39,3 +39,17 @@ git push <remote name> <branch name>
 `git commit --amend` will open up your default editor, which is maybe VI or VIM (hint: `:w` to write/save changes, `:q` to quit).
 
 If you amend a commit that you have already pushed, you will need to force push, e.g. `git push -f origin master`.
+
+## Handling Errors
+
+Sometimes, you will have errors. How you choose to handle errors (or not) is up to you :)
+
+```python
+while True:
+    try:
+        x = int(input("give me a number: "))
+    except ValueError:
+        print("There was an error")
+
+```
+
