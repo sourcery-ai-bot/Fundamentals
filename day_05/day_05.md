@@ -57,6 +57,7 @@ while True:
   
 We worked on a program that allowed us to view, add, and remove users. Let's add edit (or update) to the list of options, and let's store users in a file. That way, we can save the list of users when we exit the program. Think about what the file should look like.
 
+
 ## Exercise 01
 
 Create two files in a directory, `app.py` and `lol`
@@ -80,7 +81,7 @@ my_file = open('lol', 'w')
 my_file.write("Here is a new line!")
 ```
 
-If you run the app, you'll notice it overwrites the file. Using what you know now, write some codes such that you can add a new line to a file without losing the file data.
+If you run the app, you'll notice it overwrites the file. Using what you know now, write some code such that you can add a new line to a file without losing the file data.
 
 e.g. the result should be:
 
@@ -92,3 +93,22 @@ the third line is here
 Here is a new line!
 
 ```
+
+Exercise 01 Answer
+```
+my_file = open('some_file', 'a')
+
+my_file.write("Here is a new line!\n")
+
+f = open('some_file', 'r')
+
+for line in f:
+    print(line, end='')
+
+```
+
+## Exercise 02
+
+a.) Write a program that prompts the user to enter their name. The program should allow you to enter your name or view all entries. It should also store the names in a file.
+
+b.) Next, add the ability to update a name (by index).

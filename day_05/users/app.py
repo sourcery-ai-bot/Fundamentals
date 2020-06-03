@@ -1,8 +1,20 @@
 
-my_file = open('lol')
+def get_user_name():
+    # prompt a user to give their name.
+    name = input("What is your name? ")
+    return name
 
-for line in my_file:
-    print(line)
+def save(name):
+    # write the name to a file
+    names = open('names', 'a')
+    names.write(name + '\n')
 
-my_file = open('lol', 'w')
-my_file.write("Here is a new line!")
+def show_names():
+    names = open('names', 'r')
+    for name in names:
+        print(name, end='')
+
+name = get_user_name()
+save(name)
+show_names()
+
