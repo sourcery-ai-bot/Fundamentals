@@ -47,7 +47,8 @@ Sometimes, you will have errors. How you choose to handle errors (or not) is up 
 ```python
 while True:
     try:
-        x = int(input("give me a number: "))
+        number = int(input("give me a number: "))
+        break
     except ValueError:
         print("There was an error")
 
