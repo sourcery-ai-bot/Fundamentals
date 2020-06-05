@@ -12,5 +12,11 @@ def reverse_list(list):
 # it should return a dictionary whose key => value mappings are country => city. Cities should also
 # be dictionaries of city => population.
 def city_pop_dict(country, cities, populations):
-    return_dictionary = {}
-    return return_dictionary
+    city_pops = {}
+    for city in cities:
+        city_pops[city] = populations[cities.index(city)]
+
+    return {country: city_pops}
+
+# 3: look at the test suite we've created, and find commonality among the test functions. Could
+# they be refactored into something that is more reusable, cleaning and fun to work with?
