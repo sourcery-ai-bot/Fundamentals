@@ -96,7 +96,7 @@ Here is a new line!
 ```
 
 Exercise 01 Answer
-```
+```python
 my_file = open('some_file', 'a')
 
 my_file.write("Here is a new line!\n")
