@@ -110,3 +110,125 @@ def reverse_list(list):
 ## Exercise 02:
 
 Using our new test suite framework, refactor the rest of the tests from day 06.
+
+## Exercise 03:
+
+Let's think back to the homework we did on day 02. We thought about an application that would be able to handle lists of authors and their books.
+
+```python
+# Write a program that asks a user what the user wants to do. The choices are:
+# view authors, view books by author, add authors, add books to authors.
+help_menu = """
+OUR WONDERFUL LIST OF BOOKS -- HELP MENU
+========================================
+
+COMMANDS              DESCRIPTION
+--------              -----------
+
+h, help               prints this help menu
+view authors          view a list of all the authors
+view books by author  view a list of books, organized by author
+add authors           add authors by name
+add books to authors  add books to authors by name of author and title of book
+q, quit               quits the program
+"""
+
+while True:
+    choice = input("What do you want to do? (Type 'help' for the help menu): ")
+
+    if choice == "help" or choice == 'h':
+        print(help_menu)
+    elif choice == "q" or choice == "quit":
+        break
+    elif choice == "view authors":
+        print("You chose {}.".format(choice))
+    elif choice == "view books by author":
+        print("You chose {}.".format(choice))
+    elif choice == "add authors":
+        print("You chose {}.".format(choice))
+    elif choice == "add books to authors":
+        print("You chose {}.".format(choice))
+    else:
+        print("ERROR: Invalid selection!")
+        print(help_menu)
+```
+
+What might the data look like? How might we store it? What might it look like in memory, and what might it look like on disk (i.e. in a file)?
+
+```python
+list_of_books = ['green eggs and ham', 'one fish two fish', 'the cat in the hat', 'horton hears and who']
+author = 'Dr. Seuss'
+
+authors_and_books = {author: list_of_books}
+
+authors_and_books = {
+    'Dr. Seuss': ['green eggs and ham', 'one fish two fish', 'the cat in the hat', 'horton hears and who'],
+    'J.K. Rowling': ['Harry Potter and something 1', 'Harry Potter and something 2']
+}
+
+for author in authors_and_books:
+    print("Author: " + author)
+    print("Books: {}".format(authors_and_books[author]))
+
+
+```
+
+Another way we could store authors and books is in a list of key, value dictionaries, i.e.
+```python
+authors_and_books = [
+    {'author': 'Dr. Seuss', 'books': ['green eggs and ham', 'one fish two fish', 'the cat in the hat', 'horton hears and who']}, 
+    {'author': 'J.K. Rowling', 'books': ['Harry Potter and something 1', 'Harry Potter and something 2']}, 
+    {'author': 'Steven Pinker', 'books': ["The Language Instinct", "How the Mind Works", "Words and Rules"]}
+]
+
+for item in authors_and_books:
+    print("{}'s books include: ".format(item[author], item[books]))
+
+```
+
+Now, let's think a little about what a file that stores this data might look like.
+
+```txt
+Dr. Seuss, green eggs and ham, one fish two fish, the cat in the hat, horton hears and who
+J.K. Rowling, Harry Potter and something 1, Harry Potter and something 2
+Steven Pinker, The Language Instinct, How the Mind Works, Words and Rules
+
+```
+
+Having spent some time thinking through the way we might store data in memory and on disk, let's think through some of the functions we might need to create and use this data. While doing so, let's keep our help menu in mind
+
+```python
+help_menu = """
+OUR WONDERFUL LIST OF BOOKS -- HELP MENU
+========================================
+
+COMMANDS              DESCRIPTION
+--------              -----------
+
+h, help               prints this help menu
+view authors          view a list of all the authors
+view books by author  view a list of books, organized by author
+add authors           add authors by name
+add books to authors  add books to authors by name of author and title of book
+q, quit               quits the program
+"""
+
+```
+
+a.) Write function that will read data from the data storage (in this case a file). But, before you do, write a test.
+
+```python
+def read():
+    # your code goes here
+    pass
+
+```
+
+b.) Write a function that will write data _to_ the data storage. But, before you do, write a test.
+
+```python
+def write():
+    # your code goes here
+    pass
+
+```
