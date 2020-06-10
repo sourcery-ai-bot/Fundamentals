@@ -106,3 +106,7 @@ def reverse_list(list):
     return reversed_list
 
 ```
+
+## Exercise 02:
+
+Using our new test suite framework, refactor the rest of the tests from day 06.
