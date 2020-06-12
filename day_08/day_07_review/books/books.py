@@ -1,11 +1,17 @@
 def read():
-    expected = [
-        {'author': 'Dr. Seuss', 'books': ['green eggs and ham', 'one fish two fish', 'the cat in the hat', 'horton hears and who']}, 
-        {'author': 'J.K. Rowling', 'books': ['Harry Potter and something 1', 'Harry Potter and something 2']}, 
-        {'author': 'Steven Pinker', 'books': ["The Language Instinct", "How the Mind Works", "Words and Rules"]}
-    ]
+    file = open('books_data.txt', 'r')
+    data_list = file.readlines()
+    file.close()
 
-    return expected
+    books_and_authors = []
+    for item in data_list:
+        data_entry = item.split(',')
+        author = data_entry.pop(0)
+        books = data_entry
+        books_and_authors.append({'author': author, 'books': books})
+
+
+    return books_and_authors
 
 def add(author):
     pass

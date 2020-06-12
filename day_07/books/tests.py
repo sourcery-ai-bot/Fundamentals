@@ -17,7 +17,8 @@ def run_tests():
     ]
     assert_equals(read(), expected, "read authors and books from the data store")
 
-    # test add author to data store
+
+    test add author to data store
     expected = [
         {'author': 'Dr. Seuss', 'books': ['green eggs and ham', 'one fish two fish', 'the cat in the hat', 'horton hears and who']}, 
         {'author': 'J.K. Rowling', 'books': ['Harry Potter and something 1', 'Harry Potter and something 2']}, 

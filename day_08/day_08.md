@@ -29,6 +29,35 @@ In Module 07, [Exercise 03](https://github.com/compsciacademy/Fundamentals/blob/
 
 Then, we discussed what the data might look like in a file we are storing it in. We decided we can have an author's name, followed by a comma, and then a list of comma book titles for that author.
 
-We left off by setting up the tests for Exercise 03 a:
-
+We left off by setting up the tests for Exercise 03 a:  
+  
 Write function that will read data from the data storage (in this case a file). But, before you do, write a test.
+  
+and Exercise 03 b:  
+  
+Write a function that will write data _to_ the data storage. But, before you do, write a test.  
+
+## Exercise 01
+
+a.) Let's now make the tests we wrote yesterday pass. Then deal with the issues we may have due to how we wrote them.
+
+```python
+def get_authors():
+    # 1. Read the data from the file `books_data.txt` into some sort of variable. Perhaps a list of each of the lines (i.e. strings)
+    data_list = [
+        "Dr. Seuss, green eggs and ham, one fish two fish, the cat in the hat, horton hears and who", 
+        "J.K. Rowling, Harry Potter and something 1, Harry Potter and something 2",
+        "Steven Pinker, The Language Instinct, How the Mind Works, Words and Rules"
+    ]
+
+    # 2. Take the data_list data, and put it into a list `authors_books` that contains 1 dictionary per author, with the keys of
+    # `author` and `books`, whose values are the `name of the author` for value of the `author` key, and `list of author's books` 
+    # for the value of the `books` key.
+    authors_books = [
+        {'author': 'Dr. Seuss', 'books': ['green eggs and ham', 'one fish two fish', 'the cat in the hat', 'horton hears and who']}, 
+        {'author': 'J.K. Rowling', 'books': ['Harry Potter and something 1', 'Harry Potter and something 2']}, 
+        {'author': 'Steven Pinker', 'books': ["The Language Instinct", "How the Mind Works", "Words and Rules"]}
+    ]
+
+    return authors_books
+```
