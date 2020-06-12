@@ -1,3 +1,4 @@
+        books = data_entry
 # Fundamentals Day 08
 
 Let's review day 07. We had an assignment to write an application for interacting with authors and book data.
@@ -42,7 +43,7 @@ Write a function that will write data _to_ the data storage. But, before you do,
 a.) Let's now make the tests we wrote yesterday pass. Then deal with the issues we may have due to how we wrote them.
 
 ```python
-def get_authors():
+def read():
     # 1. Read the data from the file `books_data.txt` into some sort of variable. Perhaps a list of each of the lines (i.e. strings)
     data_list = [
         "Dr. Seuss, green eggs and ham, one fish two fish, the cat in the hat, horton hears and who", 
@@ -60,4 +61,17 @@ def get_authors():
     ]
 
     return authors_books
+```
+
+b.) let's make the other function do what we want it to do.
+
+```python
+def add(author):
+    # 1.) open a file so that we can write to it
+
+    # 2.) author = {'author': 'Dawkins', 'books': ["The Selfish Gene", "The Extended Phenotype", "The Blind Watchmaker"]}
+    # format the author dictionary into a string that looks like what our file wants, i.e.
+    # author_and_books = 'Dawkins, The Selfish Gene, The Extended Phenotype, The Blind Watchmaker'
+    # then we want to write that author_and_books item to the books_data.txt file.
+
 ```
