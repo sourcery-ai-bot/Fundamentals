@@ -1,5 +1,5 @@
-def read():
-    file = open('books_data.txt', 'r')
+def read(filename='books_data.txt'):
+    file = open(filename, 'r')
     data_list = file.readlines()
     file.close()
 
@@ -17,11 +17,11 @@ def read():
 
     return books_and_authors
 
-def add(author):
-    file = open('books_data.txt', 'a')
+def add(author, filename='books_data.txt'):
+    file = open(filename, 'a')
     author_and_books = author['author']
     for book in author['books']:
         author_and_books += ', ' + book
 
-    file.write('\n' + author_and_books)
+    file.write(author_and_books + '\n')
     file.close()

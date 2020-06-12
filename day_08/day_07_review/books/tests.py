@@ -1,4 +1,7 @@
 from books import *
+import os
+
+TEST_DATA_FILE = 'test_books_data.text'
 
 def assert_equals(actual, expected, test_name=""):
     if actual == expected:
@@ -8,24 +11,40 @@ def assert_equals(actual, expected, test_name=""):
         print("Expected: {}".format(expected))
         print("Got: {}".format(actual))
 
-def run_tests():
-    # test read authors from data store
-    expected = [
-        {'author': 'Dr. Seuss', 'books': ['green eggs and ham', 'one fish two fish', 'the cat in the hat', 'horton hears and who']}, 
-        {'author': 'J.K. Rowling', 'books': ['Harry Potter and something 1', 'Harry Potter and something 2']}, 
-        {'author': 'Steven Pinker', 'books': ["The Language Instinct", "How the Mind Works", "Words and Rules"]}
-    ]
-    assert_equals(read(), expected, "read authors and books from the data store")
+def test_setup():
+    print("Setting up")
+    open(TEST_DATA_FILE, "a")
 
-    # test add author to data store
+def test_teardown():
+    print("Tearing down")
+    os.remove(TEST_DATA_FILE)
+
+def run_tests():
+    test_setup()
+
+    # test data
     expected = [
-        {'author': 'Dr. Seuss', 'books': ['green eggs and ham', 'one fish two fish', 'the cat in the hat', 'horton hears and who']}, 
+        {
+            'author': 'Dr. Seuss', 
+            'books': [
+                'green eggs and ham', 
+                'one fish two fish', 
+                'the cat in the hat', 
+                'horton hears a who'
+            ]
+        }, 
         {'author': 'J.K. Rowling', 'books': ['Harry Potter and something 1', 'Harry Potter and something 2']}, 
         {'author': 'Steven Pinker', 'books': ["The Language Instinct", "How the Mind Works", "Words and Rules"]},
         {'author': 'Dawkins', 'books': ["The Selfish Gene", "The Extended Phenotype", "The Blind Watchmaker"]}
     ]
-    author = {'author': 'Dawkins', 'books': ["The Selfish Gene", "The Extended Phenotype", "The Blind Watchmaker"]}
-    add(author)
-    assert_equals(read(), expected, "add author to the data store")
+
+    # add test data to data store
+    for author_books in expected:
+        add(author_books, TEST_DATA_FILE)
+    
+    # test that we can read the data that we added to the data store
+    assert_equals(read(TEST_DATA_FILE), expected, "add authors to the data store")
+
+    test_teardown()
 
 run_tests()

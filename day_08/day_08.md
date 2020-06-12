@@ -1,4 +1,3 @@
-        books = data_entry
 # Fundamentals Day 08
 
 Let's review day 07. We had an assignment to write an application for interacting with authors and book data.
@@ -75,3 +74,14 @@ def add(author):
     # then we want to write that author_and_books item to the books_data.txt file.
 
 ```
+
+## Exercise 02
+
+a.) Add some functionality to the `test_setup` function to:
+    - create a test data file
+    - possibly add some data to it
+
+b.) Add some functionality to the `test_teardown` function to:
+    - remove the test data file
+
+**HINT**: have a look at the [os](https://docs.python.org/3.8/library/os.html) library.
