@@ -5,9 +5,13 @@ def read():
 
     books_and_authors = []
     for item in data_list:
+        item = item.strip('\n')
         data_entry = item.split(',')
         author = data_entry.pop(0)
-        books = data_entry
+        books = []
+        for book in data_entry:
+            book = book.strip()
+            books.append(book)
         books_and_authors.append({'author': author, 'books': books})
 
 
