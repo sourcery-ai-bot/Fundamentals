@@ -115,3 +115,16 @@ We decided to resolve these issues by creating a separate file for testing, and 
 
 This helped to expose a bug in our `add()` method, which was creating an additional line break.
 
+
+# Assignment 01
+
+Create a text-based game. Here are a couple of ideas for your game:
+
+The players control a cat. The cat has some attributes, including something like hunger or how hungry or not hungry it is. There should be some conditions that will help to determine this, such as eating food. Food can also have attributes such as how much hunger it eliminates. We could call this `energy` instead, so a cat has `energy` and food could have an `energy_value`, or something like that.
+
+So, if a cat _gains energy_ by eating food, it will _lose energy_ by competing with other cats.
+
+Cats compete with other cats. What are some ways that cats compete? Playfighting, catching mice, birds, balls of yarn, etc.
+
+These are the basic elements of the game. Interaction can be text-based, through the command line.
+
