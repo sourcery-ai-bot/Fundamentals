@@ -128,3 +128,13 @@ Cats compete with other cats. What are some ways that cats compete? Playfighting
 
 These are the basic elements of the game. Interaction can be text-based, through the command line.
 
+## Exercise 01
+
+Create a program where two cats compete in a playfight for food.
+
+Some _things_ to think about:  
+- Create a `Cat class` that you can instantiate. What should it look like? What sorts of attributes and methods should it have? What are reasonable default values, if any?  
+- Create `Food` What sort of data type should it be? What should it look like? What sorts of attributes and methods should it have? What are reasonable default values, if any?  
+- Create a `PlayFight`. What are the rules? Are there rules? What are the dependencies? Are there dependencies? Are there attributes? Do things happen? What should this look like?  
+
+Now, add some functionality so that the winning cat gains pride, and the losing cat loses pride. Both cats should lose energy, but the winning cat should eat the food, and gain some energy from it.
