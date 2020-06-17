@@ -9,8 +9,8 @@ from cat import Cat
 
 
 # Create some food
-TheFood = Food()
-print("TheFood energy_value is: {}".format(TheFood.energy_value))
+prize_food = Food()
+print("TheFood energy_value is: {}".format(prize_food.energy_value))
 
 # Create two cats that will playfight
 sunny = Cat('Sunny the Cat', 16, 27, 'medium')
@@ -18,6 +18,11 @@ bob = Cat('Robert the Cat', 9, 30, 'large')
 
 sunny.string()
 bob.string()
+
+sunny.eat(prize_food)
+bob.eat(prize_food)
+
+
 
 # we have two cats, sunny and bob, who are competing in a 
 # playfight for TheFood.
@@ -53,3 +58,4 @@ elif bob_chance_to_win > sunny_chance_to_win:
     print("{} wins!".format(bob.name))
 else:
     print("{} wins!".format(sunny.name))
+
