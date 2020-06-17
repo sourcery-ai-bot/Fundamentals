@@ -96,3 +96,22 @@ Dr. Seuss, green eggs and ham, one fish two fish, the cat in the hat, horton hea
 J.K. Rowling, Harry Potter and something 1, Harry Potter and something 2
 Steven Pinker, The Language Instinct, How the Mind Works, Words and Rules
 ```
+
+We have an OK starting point, but there are some issues with our setup.
+
+## Review Overview
+
+Currently, our tests can be run once, and then they fail. This is due to a couple of reasons.
+
+Let's identify the reasons.
+
+The data we are testing is data that our tests _should not_ have control over. This means that we cannot make any reasonable assumptions as to what that data is. It also means, we should not be modifying it in anyway, including adding to it.
+
+Another reason is that our tests do not clean up after themselves. So, the hard-coded expected results do not change, but the data stored on disk, that we are testing against _does_ change.
+
+---
+
+We decided to resolve these issues by creating a separate file for testing, and by deleting it when our tests are complete. Because we did this, we decided to change the hard-coded filename in our `read()` and `add()` methods to an optional argument with the default of the previously hard-coded value. This way, when we run our tests, we can pass the filename of our test data file.
+
+This helped to expose a bug in our `add()` method, which was creating an additional line break.
+
