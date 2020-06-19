@@ -38,4 +38,8 @@ Now that we are able to read and write cat data to a data store (a file, in this
 
 a.) Give cats more attributes: `energy`, `pride`, `size`. Energy and pride should be of type `int` and size should be of type `str`, and one of the following: "small", "medium", "large"
 
+**HINT**: use the `random` library `import random` to generate random integers, e.g. `random.randint(10, 25)` will return an integer in the range between 10 and 25.
+
+User `random.choice()` to select from a list of strings, e.g. `random.choice(['red', 'green', 'blue'])` will return one of 'red', 'green', 'blue'.
+
 b.) Create a class method on the `Cat` class called `find_by_name()` that takes an argument of type `str`, looks for the cat in the cats data store, and returns a cat object.

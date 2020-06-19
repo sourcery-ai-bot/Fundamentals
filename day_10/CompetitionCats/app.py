@@ -2,11 +2,16 @@
 #
 # An application for competiting with cats!
 from cat import Cat
+import random
 
 def new_cat(name):
     # let's get a name from the user
     print("Making a new cat!")
-    cat = Cat(name)
+    sizes = ['small', 'medium', 'large']
+    pride = random.randint(10, 25)
+    energy = random.randint(15, 20)
+    size = random.choice(sizes)
+    cat = Cat(name, pride, energy, size)
     cat.save()
 
 def find_cats():
@@ -34,6 +39,10 @@ def run():
         elif user_input == 'u':
             cats = find_cats()
             cat_name = input("which cat would you like to use?\n{}\n".format(cats))
+            while (cat_name in cats) == False:
+                print("{} was not found. Please select from the list: ".format(cat_name))
+                cat_name = input("which cat would you like to use?\n{}\n".format(cats))
+
             print("You've chosen {}".format(cat_name))
         elif user_input == 'q':
             break
