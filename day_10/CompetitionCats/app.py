@@ -9,8 +9,10 @@ def new_cat(name):
     cat = Cat(name)
     cat.save()
 
-def find_cat():
+def find_cats():
     print("Finding a cat!")
+    cats = Cat.get_all()
+    return cats
 
 menu = '''
 CompetitionCats!
@@ -30,7 +32,9 @@ def run():
             name = input("What is your cat's name? ")
             new_cat(name)
         elif user_input == 'u':
-            find_cat()
+            cats = find_cats()
+            cat_name = input("which cat would you like to use?\n{}\n".format(cats))
+            print("You've chosen {}".format(cat_name))
         elif user_input == 'q':
             break
         else:

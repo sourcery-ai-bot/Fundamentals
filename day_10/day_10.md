@@ -31,3 +31,11 @@ class Cat:
         pass
 
 ```
+
+## Exercise 03
+
+Now that we are able to read and write cat data to a data store (a file, in this case), let's give cats more attributes, so that they are useful for competitions. Let's also return a cat object with a Class method on the `Cat` class `find_cat_by_name("Blinky")`.
+
+a.) Give cats more attributes: `energy`, `pride`, `size`. Energy and pride should be of type `int` and size should be of type `str`, and one of the following: "small", "medium", "large"
+
+b.) Create a class method on the `Cat` class called `find_by_name()` that takes an argument of type `str`, looks for the cat in the cats data store, and returns a cat object.
