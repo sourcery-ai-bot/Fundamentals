@@ -48,6 +48,35 @@ b.) Create a class method on the `Cat` class called `find_by_name()` that takes 
 
 Add some additional functionality to the CompetitionCats application. Users should be able to select a cat, and engage in a competition with another cat.
 
-a.) Think through what the choices a user should have will be.
-b.) Think through what competitions should be implemented, and how they will work.
-c.) After you have given it some though, try implementing it.
+a.) Think through what the choices a user should have will be.  
+b.) Think through what competitions should be implemented, and how they will work.  
+c.) After you have given it some though, try implementing it.  
+
+## Brief introduction to HTML
+
+HTML is a language we use to organize information on a web page. It's pretty straight forward, and fun!
+
+Here's a legend of how HTML works:
+```html
+<element attribute='value'></element>
+```
+
+Here's a real example of an HTML web page:
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Super Awesome Website</title>
+    </head>
+    <body>
+        <h1>Welcome to My Website!</h1>
+        <p>This is a paragraph about my website</p>
+    </body>
+</html>
+```
+
+**BONUS**: The [Google HTML/CSS Styleguide](https://google.github.io/styleguide/htmlcssguide.html) is a great resource!
+
+
+
+
