@@ -1,0 +1,33 @@
+# Fundamentals Day 10
+
+Let's build on the Cat competition application we worked on last time, and create a user interface. Also, let's have a way for a user to create a character (a cat), and compete against other users.
+
+## Exercise 01
+
+First, start out with a command line interface, like we're familiar with. Then, we will have a look at using a web browser based interface.  
+  
+```
+CompetitionCats!
+
+n  make a new cat
+u  use an existing cat
+q  quit
+
+What would you like to do?
+```
+
+## Exercise 02
+
+Create a method on the class `Cat` called `save()` so that when `Cat("CatName").save()` is called, it will write the cat information to a file. Maybe something like `cats.db` or `cats_db.txt`
+
+Here's a starter `Cat` class:
+
+```python
+class Cat:
+    def __init__(self, name):
+        self.name = name
+
+    def save(self):
+        pass
+
+```
