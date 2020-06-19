@@ -43,3 +43,11 @@ a.) Give cats more attributes: `energy`, `pride`, `size`. Energy and pride shoul
 User `random.choice()` to select from a list of strings, e.g. `random.choice(['red', 'green', 'blue'])` will return one of 'red', 'green', 'blue'.
 
 b.) Create a class method on the `Cat` class called `find_by_name()` that takes an argument of type `str`, looks for the cat in the cats data store, and returns a cat object.
+
+## Exercise 04 (Homework)
+
+Add some additional functionality to the CompetitionCats application. Users should be able to select a cat, and engage in a competition with another cat.
+
+a.) Think through what the choices a user should have will be.
+b.) Think through what competitions should be implemented, and how they will work.
+c.) After you have given it some though, try implementing it.

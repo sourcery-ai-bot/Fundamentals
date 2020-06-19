@@ -28,11 +28,15 @@ class Cat:
 
     @classmethod
     def find_by_name(cls, name):
-        # 
-        # name = # something
-        # energy = # something
-        # pride = # something
-        # size = # something
-        # cat = cls(name, energy, pride, size)
-        # return cat
-        pass
+        cats_db = open('cats.db', 'r')
+        found_cat = ''
+
+        for cat in cats_db.readlines():
+            # "Sheera, 20, 18, small\n"
+            cat = cat.strip('\n').split(',')
+            # ["Sheera", 20, 18, "small"]
+            if cat[0] == name:
+                found_cat = cls(cat[0], cat[1], cat[2], cat[3])
+                print("found cat: {}, {}".format(found_cat.name, found_cat.energy))
+            
+        return found_cat

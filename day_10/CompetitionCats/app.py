@@ -43,7 +43,8 @@ def run():
                 print("{} was not found. Please select from the list: ".format(cat_name))
                 cat_name = input("which cat would you like to use?\n{}\n".format(cats))
 
-            print("You've chosen {}".format(cat_name))
+            cat = Cat.find_by_name(cat_name)
+            print("You've chosen {}".format(cat.name))
         elif user_input == 'q':
             break
         else:
