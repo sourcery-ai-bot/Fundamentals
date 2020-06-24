@@ -50,7 +50,7 @@ Add some additional functionality to the CompetitionCats application. Users shou
 
 a.) Think through what the choices a user should have will be.  
 b.) Think through what competitions should be implemented, and how they will work.  
-c.) After you have given it some though, try implementing it.  
+c.) After you have given it some thought, try implementing it.  
 
 ## Brief introduction to HTML
 
