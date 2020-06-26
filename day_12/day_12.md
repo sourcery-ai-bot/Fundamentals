@@ -66,4 +66,4 @@ a.) Let's implement a system for gathering names and email addresses of users. I
 
 b.) We should be able to save user information. While duplicate names are OK, we want to ensure there are no duplicate email entries.
 
-c.) Let's also create a view that lists all users, sorted alphabetically by name.
+c.) Let's also create a view that lists all users.

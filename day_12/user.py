@@ -26,3 +26,18 @@ class User():
             users_db.close()
             return True
         return False
+    
+    @classmethod
+    def all(cls):
+        users = []
+        users_db = open('users.db', 'r')
+        for user in users_db.readlines():
+            print("I made it here 1")
+            name = user.split(",")[0]
+            print("I made it here 2")
+            email = user.split(",")[1].strip().strip("\n")
+            print("I made it here 3")
+            users.append(User(name, email))
+
+        print("got the users: {}".format(users))
+        return users

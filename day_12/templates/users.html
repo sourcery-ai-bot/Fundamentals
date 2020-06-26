@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Users</title>
+    </head>
+    <body>
+        <a href="/">Home</a> | <a href="#">Users</a>
+        <h1 style="color:blueviolet;">All Users</h1>
+        <table>
+            <tr><th>Name</th><th>Email</th></tr>
+            {% for user in users: %}
+            <tr><td>{{ user.name }}</td><td>{{ user.email }}</td></tr>
+            {% endfor %}
+        </table>
+    </body>
+</html>

@@ -18,4 +18,8 @@ def index():
                 return render_template('greet.html', name = user.name)
             return render_template('index.html')
 
+@app.route('/users', methods=['GET'])
+def users():
+    return render_template('users.html', users = User.all())
+
 app.run(debug=True)
