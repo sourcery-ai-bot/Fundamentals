@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request
+from user import User
 
 app = Flask(__name__)
 
@@ -12,5 +13,9 @@ def index():
         if len(name) < 2 or len(email) < 5:
             return render_template('index.html')
         else:
-            return render_template('greet.html', name = name)
-app.run()
+            user = User(name, email)
+            if user.save():
+                return render_template('greet.html', name = user.name)
+            return render_template('index.html')
+
+app.run(debug=True)
