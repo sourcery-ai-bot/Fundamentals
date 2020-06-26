@@ -22,6 +22,17 @@ class User():
     def email_valid(self):
         # add function logic here, returning False
         # if the email format looks invalid
+        email_address = self.email
+        split_on_at = email_address.split('@')
+        if len(split_on_at) < 2:
+            return False
+
+        split_on_dot = []
+        for word in split_on_at[1].split('.'):
+            split_on_dot.append(word)
+        if len(split_on_dot) < 2:
+            return False
+            
         return True
 
     def save(self):

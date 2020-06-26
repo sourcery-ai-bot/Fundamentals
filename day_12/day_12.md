@@ -79,6 +79,9 @@ Here are some examples of formats and whether they should return `True` or `Fals
 "lol.com"     # False
 "something@something.something"   # True
 "a@a.c"       # True
+"something@something.something.something"  # True
+my.name@mysite.ac.uk   # True
+my_name@lol   # False
 
 ```
 
