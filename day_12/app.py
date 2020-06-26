@@ -22,4 +22,4 @@ def index():
 def users():
     return render_template('users.html', users = User.all())
 
-app.run(debug=True)
+app.run()
