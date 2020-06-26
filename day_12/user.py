@@ -19,14 +19,19 @@ class User():
             return False
         return True
 
+    def email_valid(self):
+        # add function logic here, returning False
+        # if the email format looks invalid
+        return True
+
     def save(self):
-        if self.email_unique():
+        if self.email_unique() and self.email_valid():
             users_db = open('users.db', 'a')
             users_db.write("{}, {}\n".format(self.name, self.email))
             users_db.close()
             return True
         return False
-    
+
     @classmethod
     def all(cls):
         users = []

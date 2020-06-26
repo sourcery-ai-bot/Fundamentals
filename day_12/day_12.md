@@ -67,3 +67,26 @@ a.) Let's implement a system for gathering names and email addresses of users. I
 b.) We should be able to save user information. While duplicate names are OK, we want to ensure there are no duplicate email entries.
 
 c.) Let's also create a view that lists all users.
+
+## Exercise 03  
+  
+Write an instance method for the `User` class that returns `True` if the email address is in a valid format, and `False` if it is not.
+
+Here are some examples of formats and whether they should return `True` or `False`:
+
+```
+"something"   # False
+"lol.com"     # False
+"something@something.something"   # True
+"a@a.c"       # True
+
+```
+
+Example of the method:
+```python
+    def email_valid(self):
+        # add function logic here, returning False
+        # if the email format looks invalid
+        return True
+
+```
