@@ -12,10 +12,7 @@ def reverse_list(list):
 # it should return a dictionary whose key => value mappings are country => city. Cities should also
 # be dictionaries of city => population.
 def city_pop_dict(country, cities, populations):
-    city_pops = {}
-    for city in cities:
-        city_pops[city] = populations[cities.index(city)]
-
+    city_pops = {city: populations[cities.index(city)] for city in cities}
     return {country: city_pops}
 
 # 3: look at the test suite we've created, and find commonality among the test functions. Could

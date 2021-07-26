@@ -16,8 +16,7 @@ def new_cat(name):
 
 def find_cats():
     print("Finding a cat!")
-    cats = Cat.get_all()
-    return cats
+    return Cat.get_all()
 
 menu = '''
 CompetitionCats!

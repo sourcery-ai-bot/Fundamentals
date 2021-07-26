@@ -37,17 +37,16 @@ r, remove  remove a user
 """
 
 def get_user_input():
-    user_input = input("Enter a command: ")
-    return user_input
+    return input("Enter a command: ")
 
 def run_program():
     print(options)
-    
+
     while True:
         user_input = get_user_input()
-        if user_input == "q" or user_input == "quit":
+        if user_input in ["q", "quit"]:
             break
-        elif user_input == "h" or user_input == "help":
+        elif user_input in ["h", "help"]:
             print(options)
         else:
             print("Unrecognized command: {}".format(user_input))

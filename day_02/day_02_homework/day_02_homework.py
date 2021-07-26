@@ -18,9 +18,9 @@ q, quit               quits the program
 while True:
     choice = input("What do you want to do? (Type 'help' for the help menu): ")
 
-    if choice == "help" or choice == 'h':
+    if choice in ["help", 'h']:
         print(help_menu)
-    elif choice == "q" or choice == "quit":
+    elif choice in ["q", "quit"]:
         break
     elif choice == "view authors":
         print("You chose {}.".format(choice))

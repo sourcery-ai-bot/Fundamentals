@@ -73,18 +73,18 @@ def display_help():
 welcome_user()
 while True:
     user_choice = get_user_input()
-    if user_choice == "q" or user_choice == "quit":
+    if user_choice in ["q", "quit"]:
         break
-    elif user_choice == "h" or user_choice == "help":
+    elif user_choice in ["h", "help"]:
         display_help()
-    elif user_choice == "v" or user_choice == "view":
+    elif user_choice in ["v", "view"]:
         view_list()
-    elif user_choice == "a" or user_choice == "add":
+    elif user_choice in ["a", "add"]:
         first_name = input("Enter the first name : ")
         last_name = input("Enter the last name : ")
         email = input("Enter the e-mail address : ")
         new_user = User(first_name, last_name, email)
         add_user(new_user)
-    elif user_choice == "r" or user_choice == "remove":
+    elif user_choice in ["r", "remove"]:
         id = input("Enter the ID of the user to remove : ")
         remove_user_by_id(id)

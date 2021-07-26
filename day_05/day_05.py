@@ -1,8 +1,7 @@
 def get_number(message="Give me a number: ", error_message="Please input an actual number!"):
     while True:
         try:    
-            num = int(input(message))
-            return num
+            return int(input(message))
         except ValueError:
             print(error_message)
 

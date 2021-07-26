@@ -1,6 +1,5 @@
 def get_name():
-    name = input("What is your name?\n")
-    return name
+    return input("What is your name?\n")
 
 def get_names(number=10):
     names = []
@@ -21,11 +20,8 @@ def view_names():
         print(name, end='')
 
 def get_names_list():
-    names = []
     names_file = open('names_file', 'r')
-    for name in names_file:
-        names.append(name.strip('\n'))
-    return names
+    return [name.strip('\n') for name in names_file]
 
 def view_names_with_index():
     names = get_names_list()

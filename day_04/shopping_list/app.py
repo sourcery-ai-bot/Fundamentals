@@ -56,7 +56,7 @@ while True:
     user_input = get_user_input()
     if user_input == "q":
         break
-    elif user_input == "view list" or user_input == "v":
+    elif user_input in ["view list", "v"]:
         view_list()
     elif user_input == "a":
         item = input("Enter the name of an item: ")

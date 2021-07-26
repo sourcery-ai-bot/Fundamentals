@@ -17,8 +17,7 @@ def new_cat(name):
 
 def find_cats():
     print("Finding a cat!")
-    cats = Cat.get_all()
-    return cats
+    return Cat.get_all()
 
 def find_or_create(cat_name):
     cat = Cat.find_by_name(cat_name)
@@ -78,7 +77,7 @@ def run():
     global comp_1
     while True:
         user_input = input(menu)
-        
+
         if user_input == 'n':
             name = input("What is your cat's name? ")
             new_cat(name)
@@ -94,7 +93,6 @@ def run():
         elif user_input == 'p':
             if player_1 == '':
                 print("please select a cat first.")
-                pass
             else:
                 comp_1 = find_or_create('ComputerCat')
                 print("Your cat is {}".format(player_1.name))

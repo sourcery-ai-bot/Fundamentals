@@ -1,8 +1,6 @@
 
 def get_user_name():
-    # prompt a user to give their name.
-    name = input("What is your name? ")
-    return name
+    return input("What is your name? ")
 
 def save(name):
     # write the name to a file

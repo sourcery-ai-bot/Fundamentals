@@ -10,13 +10,12 @@ def index():
     elif request.method == 'POST':
         name = request.form['name']
         email = request.form['email']
-        if len(name) < 2 or len(email) < 5:
-            return render_template('index.html')
-        else:
+        if len(name) >= 2 and len(email) >= 5:
             user = User(name, email)
             if user.save():
                 return render_template('greet.html', name = user.name)
-            return render_template('index.html')
+
+        return render_template('index.html')
 
 @app.route('/users', methods=['GET'])
 def users():

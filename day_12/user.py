@@ -5,19 +5,16 @@ class User():
     
     def user_emails(self):
         user_emails = []
-        users_db = open('users.db', 'r')
-        for user in users_db.readlines():
-            print(user)
-            user_emails.append(user.strip('\n').split(',')[1].strip())
-        users_db.close()
+        with open('users.db', 'r') as users_db:
+            for user in users_db.readlines():
+                print(user)
+                user_emails.append(user.strip('\n').split(',')[1].strip())
         return user_emails
 
     def email_unique(self):
         user_emails = self.user_emails()
         print(user_emails)
-        if self.email in user_emails:
-            return False
-        return True
+        return self.email not in user_emails
 
     def email_valid(self):
         # add function logic here, returning False
@@ -27,19 +24,13 @@ class User():
         if len(split_on_at) < 2:
             return False
 
-        split_on_dot = []
-        for word in split_on_at[1].split('.'):
-            split_on_dot.append(word)
-        if len(split_on_dot) < 2:
-            return False
-            
-        return True
+        split_on_dot = [word for word in split_on_at[1].split('.')]
+        return len(split_on_dot) >= 2
 
     def save(self):
         if self.email_unique() and self.email_valid():
-            users_db = open('users.db', 'a')
-            users_db.write("{}, {}\n".format(self.name, self.email))
-            users_db.close()
+            with open('users.db', 'a') as users_db:
+                users_db.write("{}, {}\n".format(self.name, self.email))
             return True
         return False
 
